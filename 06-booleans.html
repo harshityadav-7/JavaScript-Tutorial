@@ -36,12 +36,58 @@
       console.log(!true);
       console.log(!false);
 
-      /* falsy values or which represents false: false,0,'',NaN, undefined null and other than these are all truthy values or which behaves as true in if-else statements*/
+      /* falsy values or which represents false: false,0,'',NaN, undefined null and other than these are all truthy values or which behaves as true in if-else statements
+      */
       if(5){ /* as 5 behaves as true so if case will execute*/
         console.log('truthy');
       }else{
         console.log('false');
       }
+
+      /*These truthy and falsy values are used as shortcuts explained by below example*/
+      const cartQuantity=5;
+      if(cartQuantity>0){
+        console.log('cart has products');
+      }
+      /*using truthy and falsy
+      if(cartQuantity){
+      console.log('cart has products');*/
+      /* NaN is not a number which happens when we give operation to be done between two variables of different data type like 'hello' divide by 5
+      
+      undefined results when we try to output value which hasn't been initialized and note that we can only use it with let variable type and if we use with const then we have to explicitly set that to undefined otherwise it will cause error to code*/
+      console.log(!0); /*true*/
+
+
+
+      /*ternary operator:
+      true? 'truthy: 'false';
+      similar to jave ternary behaviour->shortcut to if-else*/
+      const result = true? 'truthy':'falsy';
+      console.log(result);/*'truthy*/
+
+      result=0? 'truthy':'falsy';
+      console.log(result);/*'falsy*/
+
+
+
+
+      /*we use guardy operator when we need to short circuit before full execution
+      it is done using commandsfirst with && operator so if they are false we don't have to move to full execution of code to take AND of both values i.e., it guards the execution and in such cases where we use false AND then we say such operator combined as guard operators. Example below:*/
+      const message=false && console.log('hello');
+      /*even though false and console.log('hello') has no comparison still putting false value first stops further execution to check and returns false to message variable*/
+
+      const message2 = 5 && 'hello' /*in this case 5 is true as truthy value so message2 will store 'hello in it and we can verify it in console.log(message2); */
+
+
+
+      /*similar to guard operator we do have default operator which is used to set default values to variables in case we have if value as false. 2 Examples are below*/
+      const currency='EURO' || 'USD';
+      console.log(currency);
+
+      currency = 'undefined' || 'USD';
+      console.log(currency);
+      /*this means what it got as true it uses. in first case we do have euro so it stored it but in second we had undefined which is falcy so it stored usd as value somewhat like ternary i understood.*/
+
     </script>
   </body>
 </html>
