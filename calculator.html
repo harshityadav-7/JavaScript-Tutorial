@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      button{
+        background-color:rgb(255, 255, 255);
+        padding:10px 16px;
+        font-size:14px;
+        transition:box-shadow 0.2s ease, transform 0.2s ease;
+      }
+      button:hover{
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+      }
+      button:active{
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basic Calculator</h1>
+    <p>
+      <button onclick="
+        number+='7';
+        console.log(number);
+        ">7</button>
+
+      <button onclick="
+        number+='8';
+        console.log(number);
+        ">8</button>
+
+      <button onclick="
+        number+='9';
+        console.log(number);
+        ">9</button>
+
+      <button onclick="
+        number+='/';
+        ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        number+='4';
+        console.log(number);
+        ">4</button>
+
+      <button onclick="
+        number+='5';
+        console.log(number);
+        ">5</button>
+
+      <button onclick="
+        number+='6';
+        console.log(number);
+        ">6</button>
+
+      <button onclick="
+        number+='*';
+        ">X</button>
+    </p>
+
+    <p>
+      <button onclick="
+        number+='1';
+        console.log(number);
+        ">1</button>
+
+      <button onclick="
+        number+='2';
+        console.log(number);
+        ">2</button>
+
+      <button onclick="
+        number+='3';
+        console.log(number);
+        ">3</button>
+
+      <button onclick="
+        number+='+';
+        ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        number+='00';
+        console.log(number);
+        ">00</button>
+
+      <button onclick="
+        number+='0';
+        console.log(number);
+        ">0</button>
+
+      <button onclick="
+        number+='.';
+        console.log(number);
+        ">.</button>
+
+      <button onclick="
+        number=eval(number);
+        console.log(number);
+        ">=</button>
+    </p>
+
+
+    <script>
+      let number='';
+    </script>
+  </body>
+</html>
