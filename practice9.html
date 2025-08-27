@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const guess = 'tail';
+      let randomNumber=Math.random();
+      let computerChoice='';
+      if(randomNumber > 0.5){
+        computerChoice = 'head';
+      }else{
+        computerChoice = 'tail';
+      }
+      let result='';
+      if(guess === computerChoice){
+        result='You win!';
+      }else{
+        result='You lose.';
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
