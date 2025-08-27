@@ -12,7 +12,10 @@
       coinFlipGame('tail');
       ">Tails</button>
     <script>
-      let 
+      const stats = JSON.parse(localStorage.getItem('userStats')) || {
+        wins: 0,
+        losses: 0
+      };
       function coinFlipGame(userChoice){
         let systemChoice=Math.random() <=0.5?'head':'tail';
         let result ='';
