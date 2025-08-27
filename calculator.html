@@ -48,96 +48,93 @@
     <h1>Basic Calculator</h1>
     <p>
       <button onclick="
-        number+='7';
-        console.log(number);
+        calculate('7');
         ">7</button>
 
       <button onclick="
-        number+='8';
-        console.log(number);
+        calculate('8');
         ">8</button>
 
       <button onclick="
-        number+='9';
-        console.log(number);
+        calculate('9');
         ">9</button>
 
       <button class="op" onclick="
-        number+='/';
+        calculate('/');
         ">/</button>
     </p>
 
     <p>
       <button onclick="
-        number+='4';
-        console.log(number);
+        calculate('4');
         ">4</button>
 
       <button onclick="
-        number+='5';
-        console.log(number);
+        calculate('5');
         ">5</button>
 
       <button onclick="
-        number+='6';
-        console.log(number);
+        calculate('6');
         ">6</button>
 
       <button class="op" onclick="
-        number+='*';
+        calculate('*');
         ">x</button>
     </p>
 
     <p>
       <button onclick="
-        number+='1';
-        console.log(number);
+        calculate('1');
         ">1</button>
 
       <button onclick="
-        number+='2';
-        console.log(number);
+        calculate('2');
         ">2</button>
 
       <button onclick="
-        number+='3';
-        console.log(number);
+        calculate('3');
         ">3</button>
 
       <button class="op" onclick="
-        number+='-';
+        calculate('-');
         ">-</button>
     </p>
 
     <p>
       <button onclick="
-        number+='0';
-        console.log(number);
+        calculate('0');
         ">0</button>
 
       <button onclick="
-        number+='.';
-        console.log(number);
+        calculate('.');
         ">.</button>
 
       <button onclick="
-        number=eval(number);
-        console.log(number);
+        calculate('=');
         ">=</button>
 
       <button class="op" onclick="
-        number+='+';
-        console.log(number);
+        calculate('+');
         ">+</button>
     </p>
     <button class="clear" onclick="
-        number='';
-        console.log(number);
+        calculate('clear');
         ">Clear</button>
 
 
     <script>
       let number='';
+      function calculate(val){
+        if(val === 'clear'){
+          number='';
+        }else if(val === '='){
+          number=eval(number);
+        }else{
+          number += val;
+        }
+
+        console.log(`${number}`);
+      }
     </script>
   </body>
 </html>
