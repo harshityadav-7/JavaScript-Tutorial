@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let hour=15;
+      let result='';
+      if(hour >= 6 && hour < 12){
+        result= 'Good morning!';
+      }else if(hour >= 12 && hour < 17){
+        result = 'Good afternoon!';
+      }else{
+        result='Good night!';
+      }
+      console.log(result);
+
+      hour=7;
+      result='';
+      if(hour >= 6 && hour < 12){
+        result= 'Good morning';
+      }else if(hour >= 12 && hour < 17){
+        result = 'Good afternoon!';
+      }else{
+        result='Good night';
+      }
+      console.log(result);
+
+      let name='Harshit';
+      console.log(`${result} ${name}!`);
+    </script>
+  </body>
+</html>
