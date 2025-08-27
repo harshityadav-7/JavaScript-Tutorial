@@ -8,36 +8,40 @@
     <script>
       /*An object groups multiple values together*/
 
+      /*
       const product={
         name:'socks',
         price:1090
       };
-      console.log(typeof product);/*to know the typeof */
+      console.log(typeof product);/*to know the typeof 
       console.log(product);
       console.log(product.name);
       console.log(product.price);
       product.name='cotton socks';
+      console.log(product);*/
+
+      /*if we try to fetch any value which doesn't exist as key-pair then it will return not define
+      product.newProperty = true; to add new key-value pair
       console.log(product);
 
-      /*if we try to fetch any value which doesn't exist as key-pair then it will return not define*/
-      product.newProperty = true; /*to add new key-value pair*/
-      console.log(product);
-
-      delete product.newProperty;/*this will delete key-value pair*/
-      console.log(product);
+      delete product.newProperty;this will delete key-value pair
+      console.log(product);*/
 
 
-      /*concept of bracket notation*/
+      /*concept of bracket notation
       const product2={
         name:'shirt'
       };
       console.log(product2);
-      console.log(product2.name);/*dot notation:default*/
+      console.log(product2.name);dot notation:default
       console.log(product2['name']);/*bracket notation: useful for situations when js can think differently like when we have key equals to 'delivery-time then dot notation will give error as js will think - as minus sign and therefore in such cases we will use bracket notation. 
 
       Note that inside objects we can store any type of value even objects.
       */
-     const product3 ={
+
+
+
+     /*const product3 ={
       name:'shirt',
       'delivery-time':'1 day',
       rating:{
@@ -52,26 +56,98 @@
      console.log(product3.rating.count);
      product3.fun();
 
-     /*if we talk about console.log(); |console is an object provided by js and log is a function that is saved inside console object|*/
+     if we talk about console.log(); |console is an object provided by js and log is a function that is saved inside console object|
 
      console.log(typeof console);
 
-     /*  JSON.stringify(product2) is a method where JSON is a object which contains a function called stringify and it is used to convert js object to JSON object.
-     JSON doesn't support single quotes it used double quotes to string and this below method converts to string typeof and we can verify using typeof in front of JSON.stringfigy(js object name)*/
+       JSON.stringify(product2) is a method where JSON is a object which contains a function called stringify and it is used to convert js object to JSON object.
+     JSON doesn't support single quotes it used double quotes to string and this below method converts to string typeof and we can verify using typeof in front of JSON.stringfigy(js object name)
      console.log(typeof JSON.stringify(product2));
      const jsonString=JSON.stringify(product2);
-     console.log(JSON.parse(jsonString));/*used to convert back to js from JSON*/
+     console.log(JSON.parse(jsonString));/*used to convert back to js from JSON
 
-     /*to store value which will stay even when we refresh the page is done by using local storage as below:
-     localStorage.setItem('message','hello'); -> to store key value pair in the localStorage and yes this is the required format
+     to store value which will stay even when we refresh the page is done by using local storage as below:
+     localStorage.setItem('message','hello'); -> to store key value pair in the localStorage and yes this is the required format.Note that localStorate only supports string
      
      now to get it back from storage we use:
-     localStorage.getItem('message');*/
+     localStorage.getItem('message');
 
      localStorage.setItem('message','hello');
 
 
      console.log(localStorage.getItem('message'));
+
+     */
+
+
+
+
+
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());/*even being 'string we have function to string this is done by js auto-boxing which makes them special type of object and this autoboxing doesn't apply to null and undefined types
+     
+     Note that objects are references and not actual value*/
+     const object1={
+      message:'hello'
+     }
+     const object2=object1;
+     object1.message='Good morning!';
+     console.log(object1);
+     /*this above behavious shows clearly that objects store references and not actual value to avoid extra processing and therefore it even having const let the value modify*/
+     console.log(object2);
+
+
+
+     
+     const object3={
+      message:'Good morning!'
+     }/*this object will create different reference as so if we compare using === object1 and object3 then it will return false*/
+     console.log(object1 === object3);
+     console.log(object1 === object2);/*as they are having same reference*/
+
+
+
+
+
+     /*if we want to store value of a key from a object and we know that the variable name we are using is same as that key name then we can use shortcut
+     
+     const{message}=object4  ->this is known as destructring. example below*/
+     const object4={
+      message:'Good job!',
+      price:799
+     }
+     /*const{message}=object4;
+     console.log(message);*/
+
+     const {message, price}=object4;
+     console.log(message);
+     console.log(price);
+
+
+
+
+     /*short hand property is putting value to any key of object and knowing that we do have same name of key and value then instead of writing key:value we can simply write key. example below*/
+     const object5 ={
+      /* message:message  this will take message as key and data stored in variable message and value*/
+      message
+     };
+     console.log(object5);
+
+
+
+     /*to store a function inside an object we don't have to give name to it we can simply write as below code*/
+     const object6={
+      message,
+      /*method:function function1(){
+        console.log('method');
+      }*/
+     method(){
+      console.log('method');
+     }
+     };
+     console.log(object6);
+     object6.method();
+     
     </script>
   </body>
 </html>
