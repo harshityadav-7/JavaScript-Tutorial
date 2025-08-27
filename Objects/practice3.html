@@ -21,8 +21,10 @@
         let result ='';
         if(userChoice === systemChoice){
           result='won';
+          stats.wins++;
         }else{
           result='lost';
+          stats.losses++;
         }
         localStorage.setItem('userStats',JSON.stringify(stats))
         alert(`You ${result}!`);
