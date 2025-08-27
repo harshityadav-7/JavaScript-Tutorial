@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body{
+        background-color:black;
+        padding:20px;
+      }
+      h1{
+        color:white;
+        padding-left:30px;
+      }
+      button{
+        background-color:rgb(255, 255, 255);
+        padding:18px 26px;
+        font-size:24px;
+        font-weight:bold;
+        border-radius:51%;
+        color:white;
+        background-color:rgb(60, 59, 59);
+        overflow:hidden;
+        border:0;
+        margin:2px;
+
+        transition:box-shadow 0.2s ease, transform 0.2s ease;
+      }
+      button:hover{
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.15);
+      }
+      button:active{
+        transform: scale(0.9);
+      }
+      .op{
+        background-color:rgb(177, 113, 16);
+      }
+      .clear{
+        height:64px;
+        width:64px;
+        font-size:16px;
+        display:flex;
+        justify-content: center;
+        padding-top:22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basic Calculator</h1>
+    <p>
+      <button onclick="
+        calculate('7');
+        ">7</button>
+
+      <button onclick="
+        calculate('8');
+        ">8</button>
+
+      <button onclick="
+        calculate('9');
+        ">9</button>
+
+      <button class="op" onclick="
+        calculate('/');
+        ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculate('4');
+        ">4</button>
+
+      <button onclick="
+        calculate('5');
+        ">5</button>
+
+      <button onclick="
+        calculate('6');
+        ">6</button>
+
+      <button class="op" onclick="
+        calculate('*');
+        ">x</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculate('1');
+        ">1</button>
+
+      <button onclick="
+        calculate('2');
+        ">2</button>
+
+      <button onclick="
+        calculate('3');
+        ">3</button>
+
+      <button class="op" onclick="
+        calculate('-');
+        ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculate('0');
+        ">0</button>
+
+      <button onclick="
+        calculate('.');
+        ">.</button>
+
+      <button onclick="
+        calculate('=');
+        ">=</button>
+
+      <button class="op" onclick="
+        calculate('+');
+        ">+</button>
+    </p>
+    <button class="clear" onclick="
+        calculate('clear');
+        ">Clear</button>
+
+
+    <script>
+      let number=localStorage.getItem('number')||'';
+      console.log(number);
+      function calculate(val){
+        if(val === 'clear'){
+          number='';
+        }else if(val === '='){
+          number=String(eval(number));
+        }else{
+          number += val;
+        }
+        localStorage.setItem('number',number);
+
+        console.log(number);
+      }
+    </script>
+  </body>
+</html>
