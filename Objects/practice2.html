@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice2</title>
+  </head>
+  <body>
+    <script>
+      const product1 = {
+        'shirt':2700
+      };
+      const product2={
+        'shirt':2700
+      };
+      const product3=product1;
+      function isSameProduct(product1, product2){
+        return product1 === product2;
+      }
+      console.log(isSameProduct(product1,product2));//sifferent reference
+      console.log(isSameProduct(product1,product3));//same reference
+
+      let name='harshit';
+      let greeting='GOOD MORNING!';
+      console.log(name.toUpperCase());//to upper case
+      console.log(greeting.toLowerCase());//to lower case the string
+
+      let word='test';
+      console.log(word.repeat(2));//stringName.repeat(repeatNumber) is used to repeat string repeatNumber times in js
+    </script>
+  </body>
+</html>
