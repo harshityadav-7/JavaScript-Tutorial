@@ -15,6 +15,7 @@
       console.log(result);
 
       hour=7;
+      /*
       result='';
       if(hour >= 6 && hour < 12){
         result= 'Good morning';
@@ -22,7 +23,9 @@
         result = 'Good afternoon!';
       }else{
         result='Good night';
-      }
+      }*/
+     /*using ternary operator below*/
+     result= (hour >= 6 && hour < 12)? 'Good morning' : (hour >= 12 && hour < 17)? 'Good afternoon' : 'Good night';
       console.log(result);
 
       let name='Harshit';
