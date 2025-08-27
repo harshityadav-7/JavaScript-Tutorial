@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+
+    <script>
+      /*An object groups multiple values together*/
+
+      const product={
+        name:'socks',
+        price:1090
+      };
+      console.log(typeof product);/*to know the typeof */
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+      product.name='cotton socks';
+      console.log(product);
+
+      /*if we try to fetch any value which doesn't exist as key-pair then it will return not define*/
+      product.newProperty = true; /*to add new key-value pair*/
+      console.log(product);
+
+      delete product.newProperty;/*this will delete key-value pair*/
+      console.log(product);
+
+
+      /*concept of bracket notation*/
+      const product2={
+        name:'shirt'
+      };
+      console.log(product2);
+      console.log(product2.name);/*dot notation:default*/
+      console.log(product2['name']);/*bracket notation: useful for situations when js can think differently like when we have key equals to 'delivery-time then dot notation will give error as js will think - as minus sign and therefore in such cases we will use bracket notation. 
+
+      Note that inside objects we can store any type of value even objects.
+      */
+     const product3 ={
+      name:'shirt',
+      'delivery-time':'1 day',
+      rating:{
+        stars:4.5,
+        count:87
+      },
+      fun:function function1(){
+        console.log('function inside object');
+      }
+     };
+
+     console.log(product3.rating.count);
+     product3.fun();
+
+     /*if we talk about console.log(); |console is an object provided by js and log is a function that is saved inside console object|*/
+
+     console.log(typeof console);
+
+     /*  JSON.stringify(product2) is a method where JSON is a object which contains a function called stringify and it is used to convert js object to JSON object.
+     JSON doesn't support single quotes it used double quotes to string and this below method converts to string typeof and we can verify using typeof in front of JSON.stringfigy(js object name)*/
+     console.log(typeof JSON.stringify(product2));
+     const jsonString=JSON.stringify(product2);
+     console.log(JSON.parse(jsonString));/*used to convert back to js from JSON*/
+
+     /*to store value which will stay even when we refresh the page is done by using local storage as below:
+     localStorage.setItem('message','hello'); -> to store key value pair in the localStorage and yes this is the required format
+     
+     now to get it back from storage we use:
+     localStorage.getItem('message');*/
+
+     localStorage.setItem('message','hello');
+
+
+     console.log(localStorage.getItem('message'));
+    </script>
+  </body>
+</html>
