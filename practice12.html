@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Length Convertor</title>
+  </head>
+  <body>
+    <script>
+      function convertToLength(length, from, to){
+        let result;
+        if(from == to){
+          result=length;
+        }else if(from === 'km'){
+          result = convertToMiles(length);
+        }else{
+          result = covertToKm(length);
+        }
+        return `${result} ${to}`;
+      }
+
+
+      function covertToKm(length){
+        let kilometres = length * 1.6;
+        return kilometres;
+      }
+      function convertToMiles(length){
+        let miles = length / 1.6;
+        return miles;
+      }
+      console.log(convertToLength(50,'miles','km'));
+      console.log(convertToLength(32,'km','miles'));
+      console.log(convertToLength(50,'km','km'));
+    </script>
+  </body>
+</html>
