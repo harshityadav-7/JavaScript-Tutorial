@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice1</title>
+  </head>
+  <body>
+    <script>
+      const object1={
+        'Amazon':2095
+      };
+      console.log(object1);
+
+      object1.Amazon+=500;
+      console.log(object1);/*raised the price by 500 cents*/
+
+      object1['delivery-time']='3 days';
+      console.log(object1);/*used bracket notation*/
+
+
+      const product1={
+        'shirt':2500
+      };
+      const product2 ={
+        'trouser':1950
+      };
+      function comparePrice(product1, product2){
+        if(product1.price < product2.price){
+          return product1;
+        }else return product2;
+      }
+      console.log(comparePrice(product1,product2));
+    </script>
+  </body>
+</html>
