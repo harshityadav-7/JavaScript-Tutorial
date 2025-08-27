@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <h3>Head Tail Game</h3>
+    <button onclick="
+      coinFlipGame('head');
+      ">Head</button>
+    <button onclick="
+      coinFlipGame('tail');
+      ">Tails</button>
+    <script>
+      const STORAGE_KEY = 'userStats';
+      const saved = localStorage.getItem(STORAGE_KEY);
+      const stats = saved ? JSON.parse(saved) : { wins: 0, losses: 0 };
+      function coinFlipGame(userChoice){
+        let systemChoice=Math.random() <=0.5?'head':'tail';
+
+        
+        let result ='';
+        if(userChoice === systemChoice){
+          result='won';
+          stats.wins++;
+        }else{
+          result='lost';
+          stats.losses++;
+        }
+        localStorage.setItem('userStats',JSON.stringify(stats))
+        alert(`You ${result}!
+wins:${stats.wins},losses:${stats.losses}`);
+      }
+    </script>
+  </body>
+</html>
