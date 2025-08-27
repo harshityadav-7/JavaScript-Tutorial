@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Length Convertor</title>
+  </head>
+  <body>
+    <script>
+
+      function convertLength(length, from, to){
+        let result;
+        if(from === 'km'){
+          result = convertFromKm(length,to);
+        }else if(from === 'miles'){
+          result = convertFromMile(length,to);
+        }else if(from  === 'ft'){
+          result = convertFromFeet(length,to);
+        }else{
+          result = 'invalid unit';
+        }
+
+        if(result !== 'invalid unit'){
+          console.log(`Length(${length}) conversion from ${from} to ${to} => ${result}`);
+        }else{
+          console.log(result);
+        }
+      }
+
+      function convertFromKm(length, to){
+        let result;
+        if(to === 'miles'){
+          result = length / 1.6;
+        }else if(to === 'ft'){
+          result=length * 3281;
+        }else{
+          result=length;
+        }
+        return result;
+      }
+      function convertFromMile(length, to){
+        let result;
+        if(to === 'km'){
+          result=length * 1.6;
+        }else if(to === 'ft'){
+          result = length * 5280;
+        }else{
+          result=length;
+        }
+        return result;
+      }
+      function convertFromFeet(length, to){
+        let result;
+        if(to === 'km'){
+          result = length / 3281;
+        }else if(to === 'miles'){
+          result = length / 5280;
+        }else{
+          result=length;
+        }
+        return result;
+      }
+
+      convertLength(5,'miles','km');
+      convertLength(5,'miles','ft');
+      convertLength(5,'km','ft');
+      convertLength(5,'lbs','lbs');
+    </script>
+  </body>
+</html>
