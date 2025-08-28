@@ -12,7 +12,7 @@
       coinFlipGame('tail');
       ">Tails</button>
     <script>
-      const stats = localStorage.getItem('stats') || {
+      const stats = JSON.parse(localStorage.getItem('stats')) || {
         wins: 0,
         losses: 0
       };
@@ -26,7 +26,7 @@
           result='lost';
           stats.losses++;
         }
-        localStorage.setItem('userStats',stats)
+        localStorage.setItem('stats',JSON.stringify(stats))
         alert(`You ${result}!
 wins:${stats.wins},losses:${stats.losses}`);
       }
