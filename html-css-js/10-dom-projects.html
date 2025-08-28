@@ -9,6 +9,7 @@
       .first{
         margin-top:14px;
         font-size:18px;
+        margin-bottom:14px;
       }
       .subsribe-button{
         background-color:black;
@@ -19,8 +20,12 @@
         padding:10px 15px;
         border:none;
         cursor:pointer;
-
       }
+      .is-subscribed{
+        background-color:gray;
+        color:black;
+      }
+      
     </style>
   </head>
   <body>
@@ -67,6 +72,7 @@
 
         if(buttonElement.innerText === 'Subscribe'){
           buttonElement.innerHTML = 'Subscibed';
+          buttonElement.classList.add('is-subscribed');/*this add class is-subscribed to the button containing js-subscribe-button when it find we have clicked subsribe*/
         }else{
           buttonElement.innerHTML = 'Subscribe';
         }
