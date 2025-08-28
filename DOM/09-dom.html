@@ -4,8 +4,26 @@
     <title>DOM</title>
   </head>
   <body>
+    <button>hello</button>
     <script>
-     
+      console.log(document.title);
+      document.title='Changed';
+
+      console.log(document.body);/*this gives acccess to code of page inside body used*/
+      console.log(typeof document.body);/*it says that body element inside js is an object*/
+
+      /*document.body.innerHTML controls all the html inside body*/
+      /*console.log(document.body.innerHTML);*/
+      document.body.innerHTML = 'It worked!';
+      console.log(document.body.innerHTML);
+      /*
+     document.body.innerHTML ='hello';
+     document.title = 'Good Job!';
+     */
+
+
+     /*since we do have full control of body portion so instead of just a word we can insert code too there in the body part*/
+     document.body.innerHTML ='<button>Good Job!</button>';
     </script>
   </body>
 </html>
