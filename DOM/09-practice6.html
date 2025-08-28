@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Practice6</title>
+  </head>
+  <body>
+    <button onclick="showData(0)">Show quantity</button>
+    <button onclick="showData(1)">Add to Cart</button>
+    <button onclick="showData(2)">+2</button>
+    <button onclick="showData(3)">+3</button>
+    <button onclick="showData(4)">+4</button>
+    <button onclick="showData(5)">+5</button>
+    <button onclick="showData(-1)">Remove from cart</button>
+    <button onclick="showData(-2)">-2</button>
+    <button onclick="showData(-3)">-3</button>
+    <button onclick="quantity=0;">Reset Cart</button>
+    <script></script>
+
+    <p class="result"></p>
+
+    <script>
+      let quantity=0;
+      function showData(input){
+        if(quantity+input >10){
+          document.querySelector('.result').innerHTML='Cart is full!';
+          return;
+        }
+        if(quantity+input <0){
+          document.querySelector('.result').innerHTML='Not enough items in the cart';
+          return;
+        }
+        quantity+=input;
+        document.querySelector('.result').innerHTML=`Cart quantity: ${quantity}`;
+      }
+    </script>
+  </body>
+</html>
