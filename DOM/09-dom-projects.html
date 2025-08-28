@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>YouTube Subsribe Button</p>
+    <button class="js-subsribe-button" onclick="subscribe()
+      ">Subscribe</button>
+    
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input class="input-cost" type="text" placeholder="Cost of order" onkeydown="console.log('typing')"/>
+    <!--onkeydown and onclick are event listeners and clicks,keydowns are events-->
+    <button class="calculate-botton" onclick="getCost()">Calculate</button>
+    <p class="show-cost"></p>
+    <script>
+
+      function getCost(){
+        let cost=Number(document.querySelector('.input-cost').value.trim());
+        if(isNaN(cost)){
+          document.querySelector('.show-cost').innerHTML='Please enter a valid cost.'
+          return;
+        }
+        if(cost < 40){
+          cost+=10;
+        }
+        document.querySelector('.show-cost').innerHTML=`$${cost}`;
+      }
+      
+      /*when we have space around text like we have Subsribe button then .innerHTML will not work so to resolve the issue of space comparison we should use buttonElement.innerText in place of buttonElement.innerHTML*/
+
+      /*just like we use onclick we do have onkeydown which works to run js when we are typing something like in above at time we starts to type cost we can run console.log('typing'); which will show in console that there is something typing there*/
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subsribe-button');
+
+        if(buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscibed';
+        }else{
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+      /*
+      Event Listeners
+      onclick = click
+      onkeydown = key press
+      onscroll = scrolling
+      onmouseenter = hovering over
+      onmouseleave = stop hovering over
+      ...and many more
+      */
+    </script>
+  </body>
+</html>
