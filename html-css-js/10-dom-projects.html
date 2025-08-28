@@ -3,9 +3,10 @@
   <head>
     <title>DOM Projects</title>
     <style>
-      .body{
+      body{
         font-family:Arial;
       }
+
       .first{
         margin-top:14px;
         font-size:18px;
@@ -20,12 +21,16 @@
         padding:10px 15px;
         border:none;
         cursor:pointer;
+        margin-bottom:20px;
       }
       .is-subscribed{
         background-color:rgb(240, 240, 240);
         color:black;
       }
-      
+      .cost-input{
+        font-size:15px;
+        padding:10px;
+      }
     </style>
   </head>
   <body>
@@ -38,7 +43,7 @@
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
 
-    <input class="input-cost" type="text" placeholder="Cost of order" onkeydown="handleCostKeydown(event);
+    <input class="input-cost cost-input" type="text" placeholder="Cost of order" onkeydown="handleCostKeydown(event);
     "/>
     <!--onkeydown and onclick are event listeners and clicks,keydowns are events-->
     <button class="calculate-botton" onclick="getCost()">Calculate</button>
