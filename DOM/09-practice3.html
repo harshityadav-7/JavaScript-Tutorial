@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>DOM Practice3</title>
+    <style>
+      .get-input{
+        border:3px rgb(64, 64, 244) solid;
+        border-radius:2px;
+      }
+      .get-input,button{
+        font-size:16px;
+        padding:2px 4px;
+      }
+      .get-input:focus{
+        border:3px rgb(38, 38, 201) solid;
+        outline:none;
+      }
+      .button{
+        border:1px gray solid;
+        border-radius:2px;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="get-input" type="text" placeholder="Name" onkeydown="checkEnter(event)" />
+    <button onclick ="getDisplay()">Submit</button>
+    <p class="display"></p>
+    <script>
+      function getDisplay(){
+        let name=document.querySelector('.get-input').value;
+        document.querySelector('.display').innerHTML=`Your name is:${name}`;
+      }
+      function checkEnter(event){
+        if(event.key === 'Enter'){
+          getDisplay();
+        }
+      }
+    </script>
+  </body>
+</html>
