@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Practice5</title>
+    <style>
+      .user-input{
+        border:3px rgb(41, 41, 209) solid;
+        border-radius:3px;
+        font-size:16px;
+      }
+      .user-input:focus{
+        outline:none;
+        border-color:blue;
+      }
+      p{
+        font-size:16px;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="user-input" type="text" placeholder="Type something" onkeyup="validateUserInput()"/>
+    <p class="output-user"></p>
+
+    <script>
+      function validateUserInput(){
+        const input = document.querySelector('.user-input').value;
+        document.querySelector('.output-user').innerHTML=input;
+      }
+    </script>
+  </body>
+</html>
