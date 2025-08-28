@@ -12,12 +12,20 @@
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping.</p>
     <p>Orders over $40 = FREE shipping.</p>
-    <input class="input-cost" type="text" placeholder="Cost of order" onkeydown="console.log('typing')"/>
+
+    <input class="input-cost" type="text" placeholder="Cost of order" onkeydown="handleCostKeydown(event);
+    "/>
     <!--onkeydown and onclick are event listeners and clicks,keydowns are events-->
     <button class="calculate-botton" onclick="getCost()">Calculate</button>
     <p class="show-cost"></p>
     <script>
 
+      function handleCostKeydown(event){ /*event is an object and we have to give it as parameter otherwise the function will not know the details thus onkeydown we have to call function with argument event*/
+        console.log(event.key);
+        if(event.key === 'Enter'){
+          getCost();
+        }
+      }
       function getCost(){
         let cost=Number(document.querySelector('.input-cost').value.trim());
         if(isNaN(cost)){
@@ -52,6 +60,14 @@
       onmouseleave = stop hovering over
       ...and many more
       */
+
+      /*we have event object from js which using function key can give us exactly what key we pressed and we can use it as 
+      event.key and it will give us what key we pressed one by one so we can use it to check if we have pressed enter just to increase ease to calculate cost without clicking calculate button*/
+
+      /*Note that if we are working with string which only contains a number then js using type coercion will convert it into number to do math. example below:
+      console.log('25'-5); will give output as 20*/
+
+      /*js uses dynamic typing just like python so we don't have to think of variable type any time as first it can store and use integer type and then we can reassing value of string type to that same variable*/
     </script>
   </body>
 </html>
