@@ -4,18 +4,19 @@
     <title>DOM</title>
   </head>
   <body>
-    <button>hello</button>
+    <button>Good Job!</button>
+    <button class="jss-button">Second button</button>
     <script>
       console.log(document.title);
       document.title='Changed';
 
-      console.log(document.body);/*this gives acccess to code of page inside body used*/
-      console.log(typeof document.body);/*it says that body element inside js is an object*/
+      /*console.log(document.body);  this gives acccess to code of page inside body used 
+      console.log(typeof document.body); it says that body element inside js is an object*/
 
       /*document.body.innerHTML controls all the html inside body*/
       /*console.log(document.body.innerHTML);*/
-      document.body.innerHTML = 'It worked!';
-      console.log(document.body.innerHTML);
+      /* document.body.innerHTML = 'It worked!';
+      console.log(document.body.innerHTML); */
       /*
      document.body.innerHTML ='hello';
      document.title = 'Good Job!';
@@ -23,7 +24,28 @@
 
 
      /*since we do have full control of body portion so instead of just a word we can insert code too there in the body part*/
-     document.body.innerHTML ='<button>Good Job!</button>';
+     /*document.body.innerHTML ='<button>Good Job!</button>';*/
+
+
+     /* document.querySelector('button');/*this will put first button element from the page and will put this inside this querySelector() and we can confirm this using console.log();*/
+
+     /* console.log(document.querySelector('button')); */
+     /*since we have first button as <button>Good Job!</button> so above code will display as it is to the console*/
+
+
+     /* console.log(document.querySelector('body')); */
+     /*document.querySelector('body')); is an object so just like other above objects we can use innerHTML here too to control various things from innerHTML*/
+
+     /* document.querySelector('button').innerHTML='Changed'; this will change first button text to Changed*/
+
+     /*console.log(document.querySelector('.jss-button'));  this way we can get second or other buttons by using class name with dot before it*/
+
+
+
+     /*since html elements inside js are objects so they store value and so we can store them inside variables*/
+     const buttonElement = document.querySelector('.js-button');
+     console.log(buttonElement);
+
     </script>
   </body>
 </html>
