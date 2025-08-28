@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Practice2</title>
+  </head>
+  <body>
+    <button onclick="
+      getResult('heads');
+      ">heads</button>
+    <button onclick="
+      getResult('tails');
+      ">tails</button>
+    <p class="result"></p>
+
+    <script>
+      function getResult(choice){
+        document.querySelector('.result').innerHTML=`You chose:${choice}`;
+      }
+    </script>
+  </body>
+</html>
