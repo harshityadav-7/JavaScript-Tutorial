@@ -61,7 +61,7 @@
       playGame('scissors'); 
     " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
 
-    <p class="js-result result">You win</p>
+    <p class="js-result result"></p>
     <p class="js-userComputerMove"></p>
     <p class="js-score score"></p>
 
@@ -138,15 +138,15 @@
 
         updateScoreElement();
         document.querySelector('.js-result').innerHTML=result;
-        document.querySelector('.js-userComputerMove').innerHTML=`You ${playerMove} - ${computerMove} Computer`;
+        document.querySelector('.js-userComputerMove').innerHTML=`You
+      <img src="images/${playerMove}-emoji.png" class="move-icon">
+      <img src="images/${computerMove}-emoji.png" class="move-icon">
+      Computer`;
       }
 
       function updateScoreElement(){
         document.querySelector('.js-score').innerHTML=
-      `You
-      <img src="images/${playerMove}-emoji.png" class="move-icon">
-      <img src="images/${computerMove}-emoji.png" class="move-icon">
-      Computer`
+      `Wins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}`;
       }
 
 
