@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Practice4</title>
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <input class="input-cost" type="text" placeholder="20" onkeydown ="getResponse(event)"/>
+    <button onclick="getTotalCost()">Calculate</button>
+    <p class="net-cost"></p>
+
+    <script>
+      function getResponse(event){
+        if(event.key === 'Enter'){
+          getTotalCost();
+        }
+      }
+      function getTotalCost(){
+        let cost=document.querySelector('.input-cost').value;
+        cost=Number(cost)*100;
+        cost = (cost < 4000)? cost+1000:cost;
+        cost/=100;
+
+        document.querySelector('.net-cost').innerHTML=`$${cost}`;
+      }
+
+    </script>
+  </body>
+</html>
