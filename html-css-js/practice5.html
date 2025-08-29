@@ -60,7 +60,21 @@
           getCost();
         }
       }
-      
+      function getCost(){
+        let cost=Number(document.querySelector('.input-cost').value.trim());
+        const showCostElement=document.querySelector('.show-cost');
+        
+        showCostElement.classList.remove('error-message');
+        if(cost<0){
+          showCostElement.classList.add('error-message');
+          showCostElement.innerHTML='Error:cost cannot be less than $0'
+          return;
+        }
+        if(cost < 40){
+          cost+=10;
+        }
+        document.querySelector('.show-cost').innerHTML=`$${cost}`;
+      }
       
       
     </script>
