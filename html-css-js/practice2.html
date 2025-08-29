@@ -27,7 +27,11 @@
 
     <script>
       function getTest(){
-        document.querySelector('.js-button').innerHTML='Tested';
+        const doc=document.querySelector('.js-button');
+        doc.innerHTML='Tested';
+
+        /*this below method is used to tell if there exist a class in the section we are applying querySelector with the name as below we chose js-button*/
+        console.log(doc.classList.contains('js-button'));
       }
     </script>
   </body>
