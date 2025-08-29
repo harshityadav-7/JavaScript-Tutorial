@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice3</title>
+    <style>
+      .game{
+        background-color: black;
+        color:white;
+      }
+      .game-clicked{
+        background-color: rgb(209, 207, 207);
+        color:black;
+      }
+      .game, .game-clicked{
+        font-family: Arial;
+        font-size:16px;
+        padding:12px 22px;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+        transition:background-color 0.3s ease, color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="game" onclick="gameClicked()">Gaming</button>
+    <script>
+      function gameClicked(){
+        const doc = document.querySelector('.game');
+        if(doc.classList.contains('game-clicked')){
+          doc.classList.remove('game-clicked');
+        }else doc.classList.add('game-clicked');
+      }
+    </script>
+  </body>
+</html>
