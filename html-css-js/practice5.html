@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      body{
+        font-family:Arial;
+      }
+
+      .first{
+        margin-top:14px;
+        font-size:18px;
+        margin-bottom:14px;
+      }
+      .subsribe-button{
+        background-color:black;
+        border-radius:42px;
+        color:white;
+        font-size:13px;
+        font-weight:bold;
+        padding:10px 15px;
+        border:none;
+        cursor:pointer;
+        margin-bottom:20px;
+      }
+      .is-subscribed{
+        background-color:rgb(240, 240, 240);
+        color:black;
+      }
+      .cost-input{
+        font-size:15px;
+        padding:10px;
+      }
+      .calculate-botton{
+        background-color:green;
+        color:white;
+        font-size:15px;
+        border:none;
+        padding:11px;
+        cursor:pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input class="input-cost cost-input" type="text" placeholder="Cost of order" onkeydown="handleCostKeydown(event);
+    "/>
+    <!--onkeydown and onclick are event listeners and clicks,keydowns are events-->
+    <button class="calculate-botton" onclick="getCost()">Calculate</button>
+    <p class="show-cost"></p>
+    <script>
+
+      function handleCostKeydown(event){ /*event is an object and we have to give it as parameter otherwise the function will not know the details thus onkeydown we have to call function with argument event*/
+        console.log(event.key);
+        if(event.key === 'Enter'){
+          getCost();
+        }
+      }
+      
+      
+      
+    </script>
+  </body>
+</html>
