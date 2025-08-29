@@ -28,7 +28,10 @@
     <script>
       function getTest(){
         const doc=document.querySelector('.js-button');
-        doc.innerHTML='Tested';
+        if(doc.innerHTML === 'Test'){
+          doc.innerHTML='Tested';
+          doc.classList.add('tested');
+        }else doc.classList.remove('tested');
 
         /*this below method is used to tell if there exist a class in the section we are applying querySelector with the name as below we chose js-button*/
         console.log(doc.classList.contains('js-button'));
