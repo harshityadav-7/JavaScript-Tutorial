@@ -1,0 +1,17 @@
+.game,.music,.tech{
+        background-color: black;
+        color:white;
+      }
+      .game-clicked,.music-clicked,.tech-clicked{
+        background-color: rgb(209, 207, 207);
+        color:black;
+      }
+      .game, .game-clicked,.music,.tech,.music-clicked,.tech-clicked{
+        font-family: Arial;
+        font-size:16px;
+        padding:12px 22px;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+        transition:background-color 0.3s ease, color 0.3s ease;
+      }
