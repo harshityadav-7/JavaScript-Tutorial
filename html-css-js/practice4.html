@@ -3,15 +3,15 @@
   <head>
     <title>Practice3</title>
     <style>
-      .game{
+      .game,.music,.tech{
         background-color: black;
         color:white;
       }
-      .game-clicked{
+      .game-clicked,.music-clicked,.tech-clicked{
         background-color: rgb(209, 207, 207);
         color:black;
       }
-      .game, .game-clicked{
+      .game, .game-clicked,.music,.tech,.music-clicked,.tech-clicked{
         font-family: Arial;
         font-size:16px;
         padding:12px 22px;
@@ -24,12 +24,25 @@
   </head>
   <body>
     <button class="game" onclick="gameClicked()">Gaming</button>
+    <button class="music" onclick="gameClicked()">Music</button>
+    <button class="tech" onclick="gameClicked()">Tech</button>
     <script>
       function gameClicked(){
-        const doc = document.querySelector('.game');
+        const doc1 = document.querySelector('.game');
         if(doc.classList.contains('game-clicked')){
           doc.classList.remove('game-clicked');
         }else doc.classList.add('game-clicked');
+
+        const doc2 = document.querySelector('.music');
+        if(doc.classList.contains('music-clicked')){
+          doc.classList.remove('music-clicked');
+        }else doc.classList.add('music-clicked');
+
+
+        const doc3 = document.querySelector('.tech');
+        if(doc.classList.contains('tech-clicked')){
+          doc.classList.remove('tech-clicked');
+        }else doc.classList.add('tech-clicked');
       }
     </script>
   </body>
