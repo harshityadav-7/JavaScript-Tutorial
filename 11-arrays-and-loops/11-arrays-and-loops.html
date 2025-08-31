@@ -2,76 +2,12 @@
 <html>
   <head>
     <title>Array and Loops</title>
-    
   </head>
   <body>
     
     <script>
 
-      function handleCostKeydown(event){ /*event is an object and we have to give it as parameter otherwise the function will not know the details thus onkeydown we have to call function with argument event*/
-        console.log(event.key);
-        if(event.key === 'Enter'){
-          getCost();
-        }
-      }
-      function getCost(){
-        let cost=Number(document.querySelector('.input-cost').value.trim());
-        if(isNaN(cost)){
-          document.querySelector('.show-cost').innerHTML='Please enter a valid cost.'
-          return;
-        }
-        if(cost < 40){
-          cost+=10;
-        }
-        document.querySelector('.show-cost').innerHTML=`$${cost}`;
-      }
       
-      /*when we have space around text like we have Subsribe button then .innerHTML will not work so to resolve the issue of space comparison we should use buttonElement.innerText in place of buttonElement.innerHTML*/
-
-      /*just like we use onclick we do have onkeydown which works to run js when we are typing something like in above at time we starts to type cost we can run console.log('typing'); which will show in console that there is something typing there*/
-
-      function subscribe(){
-        const buttonElement = document.querySelector('.js-subsribe-button');
-
-        if(buttonElement.innerText === 'Subscribe'){
-          buttonElement.innerHTML = 'Subscibed';
-          buttonElement.classList.add('is-subscribed');/*this add class is-subscribed to the button containing js-subscribe-button when it find we have clicked subsribe*/
-        }else{
-          buttonElement.innerHTML = 'Subscribe';
-          buttonElement.classList.remove('is-subscribed');/*this is done to remove the class from button when we unsubsribes using button*/
-        }
-      }
-      /*
-      Event Listeners
-      onclick = click
-      onkeydown = key press
-      onscroll = scrolling
-      onmouseenter = hovering over
-      onmouseleave = stop hovering over
-      ...and many more
-      */
-
-      /*we have event object from js which using function key can give us exactly what key we pressed and we can use it as 
-      event.key and it will give us what key we pressed one by one so we can use it to check if we have pressed enter just to increase ease to calculate cost without clicking calculate button*/
-
-      /*Note that if we are working with string which only contains a number then js using type coercion will convert it into number to do math. example below:
-      console.log('25'-5); will give output as 20*/
-
-      /*js uses dynamic typing just like python so we don't have to think of variable type any time as first it can store and use integer type and then we can reassing value of string type to that same variable*/
-
-
-
-
-
-
-      /*we do have window object which includes everything we see in browser page
-      from pop-up messages to body and even console
-      it works as
-      window.document.body.innerHTML
-      window.document.querySelector()
-      window.console.log('Hello')
-      window.alert('Hi!')
-      but you have noticed we didn't use it anywhere because js automatically adds it to front and we don't have to explicitly attempts to add it*/
     </script>
   </body>
 </html>
