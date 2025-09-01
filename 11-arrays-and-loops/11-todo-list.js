@@ -12,26 +12,25 @@ function renderTodoList(){
     const todoObject=todoList[index];
     const {name, dueDate} = todoObject;
     const html =`
-      <p>
-        ${name} ${dueDate}
-        <button onclick="
-          todoList.splice(${index},1);
-          renderTodoList();
-        ">Delete</button>
-      </p>
+      <div>${name}</div>
+      <div>${dueDate}</div>
+      <button class="delete-todo-button" onclick="
+        todoList.splice(${index},1);
+        renderTodoList();
+      ">Delete</button>
     `;
     todoListHTML+=html;
   }
-  console.log(todoListHTML);
   document.querySelector('.js-todo-list').innerHTML=todoListHTML;
 }
 
 function addTodo(){
   const inputElement = document.querySelector('.js-name-input');
   const name = inputElement.value;
-  todoList.push(name);
+  const dateInputElement=document.querySelector('.js-due-date-input');
+  const dueDate=dateInputElement.value;
+  todoList.push({name,dueDate});//since key and value are same in name
 
-  console.log(todoList);
 
   inputElement.value='';
 
