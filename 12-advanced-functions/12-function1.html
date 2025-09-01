@@ -77,6 +77,7 @@
         'wash dishes',
         'watch youtube'
       ].forEach(function(value,index){ //forEach method
+        if(value === 'wash dishes') return;//'cause we can't use break in forEach loop so in such cases where we need break then go for for-loop
         console.log(index);
         console.log(value);
       });
