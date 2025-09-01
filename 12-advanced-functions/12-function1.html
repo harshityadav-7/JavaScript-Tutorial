@@ -5,6 +5,22 @@
     
   </head>
   <body>
-    
+    <script>
+      function greeting(){
+        console.log('hello');
+      }
+      greeting();
+
+      //since functions are type of value so we can store them in variable
+
+      const num=2;
+      const function1 = function function2(){
+        console.log('hello2');
+      }
+      console.log(function1);
+      console.log(typeof function1);//function
+      //since variable function1 contains function so is function then we can also call it like that function1()
+      function1();
+    </script>
   </body>
 </html>
