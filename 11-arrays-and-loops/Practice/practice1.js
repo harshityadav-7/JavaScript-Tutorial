@@ -73,8 +73,8 @@ nums=[-2,3,-5,7,10];
 countPositive(nums);
 
 function minMax(nums){
-  let min=nums[0];
-  let max=nums[0];
+  let min=null;
+  let max=null;
   for(let i=1; i<nums.length; i++){
     if(min>nums[i]) min=nums[i];
     if(max<nums[i]) max=nums[i];
@@ -83,3 +83,4 @@ function minMax(nums){
   console.log(max);
 }
 minMax(nums);
+
