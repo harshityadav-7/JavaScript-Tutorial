@@ -32,3 +32,11 @@ while(i>=0){
   console.log(i);
   i--;
 }
+
+function addOne(arr){
+  for(let i=0; i<arr.length; i++){
+    arr[i]+=1;
+  }
+  console.log(arr);
+}
+addOne(arr);
