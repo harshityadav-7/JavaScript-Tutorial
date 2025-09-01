@@ -16,5 +16,19 @@ function removeEgg(foods){
   }
   return result;
 }
-console.log(removeEgg(['egg','apple','egg','egg','ham']));
+//console.log(removeEgg(['egg','apple','egg','egg','ham']));
 
+function remove(food,total){
+  food=food.reverse();
+  let count=0;
+  let result = [];
+  for(let i=0; i<food.length; i++){
+    if(food[i] === 'egg' && count<total){
+      count++;
+      continue;
+    }
+    result.push(food[i]);
+  }
+  return result.reverse();
+}
+console.log(remove(['egg','apple','egg','egg','ham'],2));
