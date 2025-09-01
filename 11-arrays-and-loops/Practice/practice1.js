@@ -40,3 +40,20 @@ function addOne(arr){
   console.log(arr);
 }
 addOne(arr);
+
+function addNum(arr,num){
+  for(let i=0; i<arr.length; i++){
+    arr[i]+=num;
+  }
+}
+addNum(arr,2);
+
+const arr1=[1,1,2];
+const arr2=[1,1,3];
+function addArrays(arr1,arr2){
+  for(let i=0; i<arr1.length; i++){
+    arr1[i]+=arr2[i];
+  }
+}
+addArrays(arr1,arr2);
+console.log(arr1);
