@@ -75,7 +75,7 @@ countPositive(nums);
 function minMax(nums){
   let min=null;
   let max=null;
-  for(let i=1; i<nums.length; i++){
+  for(let i=0; i<nums.length; i++){
     if(min>nums[i]) min=nums[i];
     if(max<nums[i]) max=nums[i];
   }
@@ -84,3 +84,17 @@ function minMax(nums){
 }
 minMax(nums);
 
+function countWords(words){
+  const obj={};
+  for(let i=0; i<words.length; i++){
+    const word=words[i];
+    if(obj[word]){
+      obj[word]++;
+    }else{
+      obj[word]=1;
+    }
+  }
+  console.log(obj);
+}
+const words=['apple','grape','apple','apple'];
+countWords(words);
