@@ -63,7 +63,7 @@
       console.log(numsDoubled); */
 
 
-
+      /*
       const array1 = [1,2,3];
       const array2 = array1;//this will copy references
 
@@ -94,7 +94,18 @@
         }
         console.log(i);
         i++;
+      }*/
+
+      const nums=[1,1,3];
+      function doubleArray(nums){
+        const numsDoubled = [];
+        for(let index=0; index<nums.length; index++){
+          numsDoubled.push(2*nums[index]);
+        }
+        console.log(numsDoubled); 
       }
+      doubleArray([1,1,3]);
+      doubleArray([2,2,5]);
     </script>
   </body>
 </html>
