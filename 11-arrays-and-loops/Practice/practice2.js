@@ -19,15 +19,15 @@ function removeEgg(foods){
 //console.log(removeEgg(['egg','apple','egg','egg','ham']));
 
 function remove(food,total){
-  food=food.reverse();
+  newFood=food.slice().reverse();
   let count=0;
   let result = [];
   for(let i=0; i<food.length; i++){
-    if(food[i] === 'egg' && count<total){
+    if(newFood[i] === 'egg' && count<total){
       count++;
       continue;
     }
-    result.push(food[i]);
+    result.push(newFood[i]);
   }
   return result.reverse();
 }
