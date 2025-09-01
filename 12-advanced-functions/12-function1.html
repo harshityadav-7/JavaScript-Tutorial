@@ -53,7 +53,33 @@
 
 
       //setTimeout() - allows us to run a function in the future
+      //this calls functions after certain fixed time after program start as stated by developer and cause asynchronous work as other tasks below it will also possible to be done before it
+      //Asynchronous code as it doesn't wait for function inside setTimeout's function inside it
 
+
+      /*
+      setTimeout(function(){//takes 2 parameter: function and time
+        console.log('timeout');
+      },3000); //3000->3sec
+
+      console.log('next line');
+
+      setInterval(function(){
+        console.log('interval')
+      },3000);//asychronous
+
+      console.log('next line 2'); */
+
+
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value,index){ //forEach method
+        console.log(index);
+        console.log(value);
+      });
     </script>
   </body>
 </html>
