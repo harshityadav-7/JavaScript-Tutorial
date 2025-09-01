@@ -26,12 +26,14 @@ function touched(){
     docElement.innerHTML ='Start';
   }
 }
-
+let timeoutId;
 function addCart(){
   const docElement = document.querySelector('.message-container');
+
+  clearTimeout(timeoutId);
   docElement.innerHTML='Added';
 
-  setTimeout(function(){
+  timeoutId = setTimeout(function(){
     docElement.innerHTML='';
   },2000);
 }
