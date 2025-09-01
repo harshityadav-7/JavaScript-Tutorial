@@ -57,3 +57,17 @@ function addArrays(arr1,arr2){
 }
 addArrays(arr1,arr2);
 console.log(arr1);
+
+
+function countPositive(nums){
+  let count=0;
+  for(let i=0; i<nums.length; i++){
+    if(nums[i]>0) count++;
+  }
+  console.log(count);
+}
+let nums=[1,-3,5];
+countPositive(nums);
+
+nums=[-2,3,-5,7,10];
+countPositive(nums);
