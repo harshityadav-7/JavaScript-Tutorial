@@ -1,4 +1,5 @@
-const todoList =['make dinner', 'wash dishes'];//empty array
+const todoList =[];//empty array
+
 renderTodoList();
 function renderTodoList(){
   let todoListHTML='';
