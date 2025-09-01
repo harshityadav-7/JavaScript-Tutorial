@@ -2,8 +2,25 @@
 <html>
   <head>
     <title>Practice1</title>
+    <style>
+      .start-button,.finished-button, .cart-button{
+        background-color:rgb(227, 218, 218);
+        border-radius:4px;
+        font-size:15px;
+        padding:8px;
+        cursor:pointer;
+      }
+      .message-container{
+        font-size:17px;
+        margin-left:60px;
+      }
+    </style>
   </head>
   <body>
+    <button class="start-button" onclick="touched()">Start</button>
+
+    <button class="cart-button" onclick="addCart()">Add to Cart</button>
+    <p class="message-container"></p>
     <script src="practice1.js"></script>
   </body>
 </html>
