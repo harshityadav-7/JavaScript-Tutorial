@@ -6,6 +6,7 @@
   </head>
   <body>
     <script>
+      /*
       function greeting(){
         console.log('hello');
       }
@@ -21,6 +22,38 @@
       console.log(typeof function1);//function
       //since variable function1 contains function so is function then we can also call it like that function1()
       function1();
+
+      //since we can call function without its name and by variable name we stored it in then we can remove the name of function and so the function will be called annymous function
+      const function3 = function(){
+        console.log('hello3');
+      }
+      function3();
+
+      //since function is a value so we can also store it in object
+      const obj ={
+        num:2,
+        fun:function(){
+          console.log('hello4');
+        }
+      };
+      obj.fun();
+
+      function display(param){
+        console.log(param);
+      }
+      display(2);//passing a value to a function
+
+      function run(param){
+        param();//since this above value in itself contains function
+      }
+      run(function(){
+        console.log('hello5');//this whole will be passed as parameter
+      });  */
+
+
+
+      //setTimeout() - allows us to run a function in the future
+
     </script>
   </body>
 </html>
