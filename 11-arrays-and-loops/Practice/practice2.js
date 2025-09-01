@@ -1,12 +1,23 @@
 const arr=['hello','world','search','good'];
 
-function find(arr){
+function findIndex(arr,target){
   for(let i=0; i<arr.length; i++){
-    if(arr[i] === 'search') return i;
+    if(arr[i] === target) return i;
   }
   return -1;
 }
-console.log(find(arr));
+console.log(findIndex(arr));
+
+function removeDuplicates(arr){
+  let result = [];
+  for(let i=0; i<arr.length; i++){
+    if(findIndex(arr,arr[i]) === i){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
 
 function removeEgg(foods){
   let result=[];
@@ -32,3 +43,6 @@ function remove(food,total){
   return result.reverse();
 }
 console.log(remove(['egg','apple','egg','egg','ham'],2));
+
+
+console.log(removeDuplicates(['green','red','blue','red']));
