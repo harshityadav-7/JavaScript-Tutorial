@@ -8,8 +8,7 @@ const todoList =JSON.parse(localStorage.getItem('todoList')) || [{name:'make din
 renderTodoList();
 function renderTodoList(){
   let todoListHTML='';
-  for(let index=0; index<todoList.length; index++){
-    const todoObject=todoList[index];
+  todoList.forEach((todoObject,index)=>{
     const {name, dueDate} = todoObject;
     const html =`
       <div>${name}</div>
@@ -21,7 +20,7 @@ function renderTodoList(){
       ">Delete</button>
     `;
     todoListHTML+=html;
-  }
+  });
   document.querySelector('.js-todo-list').innerHTML=todoListHTML;
 }
 
