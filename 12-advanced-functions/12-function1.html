@@ -76,11 +76,25 @@
         'make dinner',
         'wash dishes',
         'watch youtube'
-      ].forEach(function(value,index){ //forEach method
+      ].forEach((value,index)=>{ //forEach method
         if(value === 'wash dishes') return;//'cause we can't use break in forEach loop so in such cases where we need break then go for for-loop
         console.log(index);
         console.log(value);
       });
+
+      const arrowFunction = () =>{
+        console.log('hello using arrow function');
+      }
+      arrowFunction();
+
+      const oneParam  = param => {//in case of 1 parameter we can even neglect () and can just go with parameter as above
+        console.log(param + 1);
+      };
+      oneParam(2);
+
+      //when we have one parameter and we have one thing to return then
+      const oneLine = () => 2 + 3;
+      console.log(oneLine());
     </script>
   </body>
 </html>
