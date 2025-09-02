@@ -22,15 +22,9 @@
     <p class="js-userComputerMove"></p>
     <p class="js-score score"></p>
 
-    <button onclick="
-      score.wins=0;
-      score.losses=0;
-      score.ties=0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-      " class="reset-score-button js-reset-score-button">Reset Score</button>
+    <button class="reset-score-button js-reset-score-button">Reset Score</button>
 
-    <button class="auto-play-button js-autoplay-button" onclick="autoplay()">Auto Play</button>
+    <button class="auto-play-button js-autoplay-button">Auto Play</button>
     <script src="12-rock-paper-scissors.js"></script>
   </body>
 </html>
