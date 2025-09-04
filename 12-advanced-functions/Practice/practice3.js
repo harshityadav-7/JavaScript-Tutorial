@@ -18,3 +18,17 @@ const removeEgg = (foods)=>{
   });
 };
 console.log(removeEgg(['egg','apple','egg','egg','ham']));
+
+//updated version of filter where we are filtering only 2 frequency of eggs
+const removeEgg2 = (foods)=>{
+  let count=0;
+  return foods.filter((value)=>{
+    if(value === 'egg' && count<2){
+      count++;
+      return false;
+    }
+    return true;
+  });
+};
+
+console.log(removeEgg2(['egg','apple','egg','egg','ham']));//tihs will only remove first 2 eggs from food array
