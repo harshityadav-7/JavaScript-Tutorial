@@ -97,6 +97,8 @@ function resetScore(){
   localStorage.setItem('score',JSON.stringify(score));
   updateScoreElement();
 }
+
+
 document.querySelector('.js-rock-button').addEventListener('click',()=>{
   playGame('rock');
 });
@@ -107,9 +109,28 @@ document.querySelector('.js-scissors-button').addEventListener('click',()=>{
   playGame('scissors');
 });
 
+
+
 document.querySelector('.js-reset-score-button').addEventListener('click',()=>{
   showConfirmDialog();
 });
+const yesButton=document.querySelector('.js-yes-button');
+const noButton=document.querySelector('.js-no-button');
+function showConfirmDialog(){
+  document.querySelector('.confirm-dialog-overlay').style.display='flex';
+}
+function hideConfirDialog(){
+  dialogOverlay.style.display='none';
+}
+yesButton.addEventListener('click',()=>{
+  resetScore();
+  hideConfirDialog();
+});
+noButton.addEventListener('click',()=>{
+  hideConfirDialog();
+});
+
+
 document.querySelector('.js-autoplay-button').addEventListener('click',()=>{
   autoplay();
   const autoplayButton = document.querySelector('.js-autoplay-button');
