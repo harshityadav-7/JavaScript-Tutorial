@@ -11,3 +11,10 @@ const addNum =(array,num)=>{
   });
 };
 console.log(addNum([1,2,3],2));
+
+const removeEgg = (foods)=>{
+  return foods.filter((value)=>{
+    return value!='egg';
+  });
+};
+console.log(removeEgg(['egg','apple','egg','egg','ham']));
