@@ -88,6 +88,15 @@ function autoplay(){
     isAutoPlaying=false;
   }
 }
+function resetScore(){
+  score={
+    wins:0,
+    losses:0,
+    ties:0
+  };
+  localStorage.setItem('score',JSON.stringify(score));
+  updateScoreElement();
+}
 document.querySelector('.js-rock-button').addEventListener('click',()=>{
   playGame('rock');
 });
@@ -99,14 +108,7 @@ document.querySelector('.js-scissors-button').addEventListener('click',()=>{
 });
 
 document.querySelector('.js-reset-score-button').addEventListener('click',()=>{
-  
-  score={
-    wins:0,
-    losses:0,
-    ties:0
-  };
-  localStorage.setItem('score',JSON.stringify(score));
-  updateScoreElement();
+  showConfirmDialog();
 });
 document.querySelector('.js-autoplay-button').addEventListener('click',()=>{
   autoplay();
