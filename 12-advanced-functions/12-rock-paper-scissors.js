@@ -116,18 +116,19 @@ document.querySelector('.js-reset-score-button').addEventListener('click',()=>{
 });
 const yesButton=document.querySelector('.js-yes-button');
 const noButton=document.querySelector('.js-no-button');
+const dialogOverlay=document.querySelector('.confirm-dialog-overlay');
 function showConfirmDialog(){
-  document.querySelector('.confirm-dialog-overlay').style.display='flex';
+  dialogOverlay.style.display='flex';
 }
-function hideConfirDialog(){
+function hideConfirmDialog(){
   dialogOverlay.style.display='none';
 }
 yesButton.addEventListener('click',()=>{
   resetScore();
-  hideConfirDialog();
+  hideConfirmDialog();
 });
 noButton.addEventListener('click',()=>{
-  hideConfirDialog();
+  hideConfirmDialog();
 });
 
 
