@@ -99,6 +99,7 @@ document.querySelector('.js-scissors-button').addEventListener('click',()=>{
 });
 
 document.querySelector('.js-reset-score-button').addEventListener('click',()=>{
+  
   score={
     wins:0,
     losses:0,
@@ -109,6 +110,12 @@ document.querySelector('.js-reset-score-button').addEventListener('click',()=>{
 });
 document.querySelector('.js-autoplay-button').addEventListener('click',()=>{
   autoplay();
+  const autoplayButton = document.querySelector('.js-autoplay-button');
+  if(autoplayButton.textContent === 'Auto Play'){
+    autoplayButton.textContent='Stop Autoplay';
+  }else{
+    autoplayButton.textContent='Auto Play';
+  }
 });
 
 document.body.addEventListener('keydown',(event)=>{
@@ -118,5 +125,10 @@ document.body.addEventListener('keydown',(event)=>{
     playGame('paper');
   }else if(event.key === 's'){
     playGame('scissors');
+  }else if(event.key === 'a'){
+    autoplay();
+  }else if(event.key === 'Backspace'){
+    event.preventDefault();
+    showConfirmDialog();
   }
 });
