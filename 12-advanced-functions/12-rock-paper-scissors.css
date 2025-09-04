@@ -35,3 +35,29 @@ body{
   padding:8px 15px;
   cursor:pointer;
 }
+
+.confirm-dialog-overlay{
+  position:fixed;
+  z-index:1000;
+  left:10px;
+}
+.confirm-dialog-box{
+  background-color:rgb(61, 59, 59);
+  padding:10px;
+  border-radius:4px;
+  text-align:center;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:10px;
+}
+.button-group{
+  font-size:30px;
+  margin-top:-10px;
+}
+.confirm-message{
+  color:black;
+  margin-bottom:-50px;
+}
